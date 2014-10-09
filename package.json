@@ -1,20 +1,30 @@
 {
   "name": "upyun-hopper",
-  "version": "0.0.1",
-  "description": "grab a bunch images into upyun bucket",
+  "version": "0.1.0",
+  "description": "grab a bunch of images into upyun bucket",
   "main": "index.js",
   "dependencies": {
+    "async": "^0.9.0",
+    "request": "^2.45.0",
+    "upyun-http-signature": "^0.1.3"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "__REPO__"
+    "url": "git@github.com:lisposter/upyun-hopper.git"
   },
+  "bugs": {
+    "url": "https://github.com/lisposter/upyun-hopper/issues"
+  },
+  "homepage": "https://github.com/lisposter/upyun-hopper",
   "keywords": [
+    "upyun",
+    "migrate",
+    "bulk",
+    "upload"
   ],
   "author": "Leigh Zhu",
   "license": "MIT"
