@@ -27,7 +27,7 @@ __Arguments__
 
 ## Example
 ```js
-var hopper = require('./');
+var hopper = require('upyun-hopper');
 
 var config = {
     bucket: 'lisposter',
