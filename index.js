@@ -4,6 +4,7 @@ var path = require('path');
 var sign = require('upyun-http-signature');
 var async = require('async');
 var request = require('request');
+var pkg = require('package.json');
 
 module.exports = function(list, config, callback) {
     if(list.length <= 0) {
@@ -19,7 +20,7 @@ module.exports = function(list, config, callback) {
             var options = {
                 url: 'http://v0.api.upyun.com/',
                 headers: {
-                    'User-Agent': 'UPYUN-Hopper',
+                    'User-Agent': 'UPYUN-Hopper/' + pkg.version || '',
                     'Mkdir': true
                 }
             };
