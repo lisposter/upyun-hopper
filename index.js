@@ -8,7 +8,7 @@ var pkg = require('package.json');
 
 module.exports = function(list, config, callback) {
     if(list.length <= 0) {
-        callback('no job to do');
+        return callback('no job to do');
     }
 
     async.eachLimit(list, 20, function(item, callback) {
@@ -31,7 +31,7 @@ module.exports = function(list, config, callback) {
 
             request.get(item).pipe(request.put(options, function(err, res, body) {
                 if (err) {
-                    callback(err);
+                    return callback(err);
                 }
                 callback(null);
             }));
@@ -39,7 +39,7 @@ module.exports = function(list, config, callback) {
         });
     }, function(err) {
         if(err) {
-            callback(err);
+            return callback(err);
         }
 
         var result = list.map(function(item) {
