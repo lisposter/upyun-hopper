@@ -17,10 +17,10 @@ __Arguments__
 
 * `imgs`: image urls list to fetch
 * `config`: config for upyun
-    * `bucket`: upyun bucket
-    * `operator`: upyun bucket's operator
+    * `bucket`: upyun bucket name
+    * `operator`: upyun bucket's operator name
     * `password`: password of operator
-    * `path`: store in which dir
+    * `path`: where the files should be upload to
 * `callback`: it will come with two arguments
     * first: `err`: for catch error
     * second: `result`: an array contains the urls of the image which uploaded to upyun bucket
